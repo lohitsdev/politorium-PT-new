@@ -88,12 +88,13 @@ body {
 .hero-text h1 {
   font-family: 'Satoshi', sans-serif;
   font-weight: 700;
-  font-size: 4.5rem;
+  font-size: 3.75rem;
   color: #333;
   margin-bottom: 1.5rem;
   line-height: 1.2;
   text-align: left;
   max-width: 100%;
+  width: 100%;
 }
 
 .hero-text p {
@@ -114,6 +115,8 @@ body {
   transform: translateY(-50%);
   width: 35%;
   padding-right: 2rem;
+  padding-top: 0;
+  margin-top: 0;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -130,7 +133,7 @@ body {
   }
   
   .hero-text h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   
   .hero-text p {
@@ -144,7 +147,7 @@ body {
   }
   
   .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   
   .hero-text p {
@@ -169,12 +172,13 @@ body {
     width: 100%;
     transform: none;
     padding-right: 0;
-    margin-top: 2rem;
+    margin-top: 1rem;
     animation: none;
   }
   
   .hero-text h1 {
-    font-size: 3rem;
+    font-size: 2.75rem;
+    text-align: center;
   }
   
   .hero-text p {
@@ -208,6 +212,9 @@ body {
   }
   
   .hero-text h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
     text-align: center;
   }
   
@@ -220,8 +227,7 @@ body {
   }
   
   .hero-image {
-    display: flex;
-    justify-content: center;
+    margin-top: 0.5rem;
   }
   
   .hero-image img {
@@ -334,7 +340,7 @@ body {
   justify-content: flex-start;
   min-height: 60vh;
   margin-top: 0;
-  padding: 4rem 4rem;
+  padding: 3rem 4rem;
 }
 
 .features-content {
@@ -350,11 +356,14 @@ body {
   font-size: 3.5rem;
   color: #333;
   margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: left;
 }
 
 .section-header {
-  text-align: center;
-  margin-bottom: 4rem;
+  text-align: left;
+  margin-bottom: 2rem;
 }
 
 .section-header h2 {
@@ -363,6 +372,7 @@ body {
   font-size: 3rem;
   color: #333;
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 .section-subtitle {
@@ -377,7 +387,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   padding-bottom: 0;
   border-bottom: none;
 }
@@ -499,6 +509,7 @@ body {
   .section-header-row {
     padding-bottom: 0;
     border-bottom: none;
+    margin-bottom: 0.25rem;
   }
 
   .section-header h2 {
@@ -516,7 +527,8 @@ body {
   }
 
   .section-title {
-    font-size: 2.5rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   .section-header-row {
@@ -525,8 +537,9 @@ body {
     gap: 1.5rem;
   }
 
-  .features-content {
-    padding: 0 2rem;
+  .alternate-features {
+    gap: 1.5rem;
+    margin-top: 0.75rem;
   }
 }
 
@@ -646,7 +659,7 @@ body {
 
 @media (max-width: 1024px) {
   .features-columns {
-    grid-template-columns: 1fr;  /* Make it single column */
+    grid-template-columns: 1fr;
   }
 
   .features-list {
@@ -672,7 +685,7 @@ body {
 
 .features-section.light {
   background-color: #fff;
-  padding: 6rem 4rem 3rem;  /* Reduced bottom padding */
+  padding: 4rem 4rem 3rem;
 }
 
 .alternate-features {
@@ -685,7 +698,7 @@ body {
 
 .single-feature-image {
   width: 100%;
-  max-width: 480px;  /* Increased from 400px to 420px (5% increase) */
+  max-width: 480px;
 }
 
 .single-feature-image img {
@@ -700,7 +713,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 2rem;
-  width: 90%;  /* Reduced from 100% to 90% */
+  width: 90%;
   min-height: 450px;
   justify-content: center;
 }
@@ -712,14 +725,14 @@ body {
   align-items: center;
   justify-content: flex-start;
   gap: 0.75rem 0.5rem;
-  width: 90%;  /* Reduced from 100% to 90% */
+  width: 90%;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .feature-name {
   color: #666;
-  font-size: 1.75rem;  /* Reduced from 2.5rem */
+  font-size: 1.75rem;
   font-weight: 500;
   white-space: normal;
   cursor: pointer;
@@ -744,12 +757,12 @@ body {
 
 .feature-names-vertical .dot-divider {
   color: #ccc;
-  font-size: 1.75rem;  /* Reduced from 2.5rem */
+  font-size: 1.75rem;
 }
 
 @media (max-width: 1024px) {
   .feature-names-container {
-    min-height: auto;  /* Remove minimum height on mobile */
+    min-height: auto;
   }
   .feature-names-vertical {
     padding: 1.25rem 0;
@@ -757,15 +770,15 @@ body {
   }
   
   .feature-name {
-    font-size: 1.25rem;  /* Reduced from 1.5rem */
+    font-size: 1.25rem;
   }
 
   .feature-names-vertical .dot-divider {
-    font-size: 1.25rem;  /* Reduced from 1.5rem */
+    font-size: 1.25rem;
   }
 
   .feature-names-vertical {
-    width: 90%;  /* Changed from 75% to match desktop */
+    width: 90%;
     gap: 0.5rem 0.375rem;
   }
 }
@@ -815,7 +828,7 @@ body {
 }
 
 .feature-description {
-  font-size: 1.25rem;  /* Increased from 1rem */
+  font-size: 1.25rem;
   line-height: 1.5;
   color: #666;
   margin-top: 0.5rem;
@@ -836,13 +849,13 @@ body {
 @media (max-width: 1024px) {
   .feature-description {
     width: 90%;
-    font-size: 1.125rem;  /* Increased from 0.875rem */
+    font-size: 1.125rem;
   }
 }
 
 @media (max-width: 768px) {
   .feature-description {
-    font-size: 1rem;  /* Increased from 0.875rem */
+    font-size: 1rem;
     line-height: 1.5;
     width: 90%;
     margin: 1rem auto 0;
@@ -853,7 +866,7 @@ body {
 
 .discourse-section {
   background-color: #fff;
-  padding: 3rem 4rem;  /* Reduced top padding */
+  padding: 3rem 4rem;
   overflow: hidden;
 }
 
@@ -909,7 +922,7 @@ body {
 
 @media (max-width: 768px) {
   .discourse-section {
-    padding: 0.5rem 0.75rem 2rem;  /* Reduced horizontal padding from 1.5rem to 0.75rem */
+    padding: 0.5rem 0.75rem 2rem;
   }
 
   .steps-container {
@@ -920,14 +933,14 @@ body {
     scroll-snap-type: y mandatory;
     -webkit-overflow-scrolling: touch;
     position: relative;
-    margin-top: 1.5rem;  /* Reduced top margin */
+    margin-top: 1.5rem;
   }
 
   .steps-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 1rem;
-    width: 95%;  /* Increased from 85% to use more horizontal space */
+    width: 95%;
     margin: 0 auto;
   }
 
@@ -1000,31 +1013,31 @@ body {
 
 @keyframes bounceUp {
   0%, 100% {
-    transform: translateX(-40%) translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
   50% {
-    transform: translateX(-40%) translateY(-15px);
+    transform: translateX(-50%) translateY(-15px);
   }
 }
 
 @keyframes bounceDown {
   0%, 100% {
-    transform: translateX(40%) translateY(0);
+    transform: translateX(50%) translateY(0);
   }
   50% {
-    transform: translateX(40%) translateY(15px);
+    transform: translateX(50%) translateY(15px);
   }
 }
 
 .footer-mockup.top {
   z-index: 2;
-  transform: translateX(-40%);  /* Reduced from -50% to -40% */
+  transform: translateX(-50%);
   animation: bounceUp 3s ease-in-out infinite;
 }
 
 .footer-mockup.bottom {
   z-index: 1;
-  transform: translateX(40%);  /* Reduced from 50% to 40% */
+  transform: translateX(50%);
   animation: bounceDown 3s ease-in-out infinite;
 }
 
@@ -1089,8 +1102,8 @@ body {
 
 .footer-links {
   display: flex;
-  flex-direction: row;  /* Changed from column to row */
-  justify-content: space-between;  /* Space between copyright and links */
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   margin-top: 2rem;
   padding-top: 2rem;
@@ -1153,7 +1166,7 @@ body {
   }
 
   .footer-links {
-    flex-direction: column;  /* Stack on mobile */
+    flex-direction: column;
     gap: 1rem;
     text-align: center;
   }
@@ -1161,43 +1174,43 @@ body {
 
 @media (max-width: 768px) {
   .footer-section {
-    padding: 3rem 0.75rem 2rem;  /* Reduced padding from 4rem 2rem to 3rem 0.75rem 2rem */
+    padding: 3rem 0.75rem 2rem;
   }
   
   .footer-content {
-    gap: 2rem;  /* Reduced from 3rem */
+    gap: 2rem;
   }
   
   .footer-mockups {
-    height: 250px;  /* Reduced from 300px */
-    margin-bottom: 1rem;  /* Reduced from 2rem */
+    height: 250px;
+    margin-bottom: 1rem;
   }
   
   .footer-mockup {
-    height: 220px;  /* Reduced from 250px */
+    height: 220px;
   }
   
   .footer-info {
-    gap: 1.5rem;  /* Reduced from 3rem */
+    gap: 1.5rem;
   }
   
   .footer-header {
-    gap: 0.5rem;  /* Reduced from 1rem */
+    gap: 0.5rem;
   }
   
   .footer-subtitle {
-    font-size: 1.125rem;  /* Reduced from 1.25rem */
-    line-height: 1.4;  /* Reduced from 1.6 */
+    font-size: 1.125rem;
+    line-height: 1.4;
   }
   
   .footer-cta {
-    margin-top: 0.5rem;  /* Reduced from 1rem */
+    margin-top: 0.5rem;
   }
   
   .footer-links {
-    margin-top: 1.5rem;  /* Reduced from 2rem */
-    padding-top: 1.5rem;  /* Reduced from 2rem */
-    gap: 0.75rem;  /* Reduced from 1rem */
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    gap: 0.75rem;
   }
 }
 
@@ -1217,13 +1230,13 @@ body {
     order: 1;
     min-height: auto;
     gap: 1.5rem;
-    padding: 0 2rem; /* Keep padding for text content */
+    padding: 0 2rem;
   }
 
   .single-feature-image {
     order: 2;
-    max-width: 75%;  /* Reduced from 100% to 75% */
-    margin: 0 auto;  /* Center the image */
+    max-width: 75%;
+    margin: 0 auto;
   }
 
   .single-feature-image img {
@@ -1244,14 +1257,14 @@ body {
   }
 
   .feature-description {
-    width: 90%;  /* Changed from 75% to match desktop */
+    width: 90%;
     font-size: 0.875rem;
   }
 }
 
 @media (max-width: 768px) {
   .features-section.light {
-    padding: 3rem 0.75rem 2rem;  /* Reduced horizontal padding from 1rem to 0.75rem */
+    padding: 2rem 0.75rem 2rem;
   }
   
   /* Adjust feature content to use more horizontal space */
@@ -1262,11 +1275,11 @@ body {
   
   /* Ensure single feature image uses proper width */
   .single-feature-image {
-    max-width: 85%;  /* Increased from 75% to use more horizontal space */
+    max-width: 85%;
   }
 
   .discourse-section {
-    padding: 0.5rem 0.75rem 2rem;  /* Reduced horizontal padding from 1.5rem to 0.75rem */
+    padding: 0.5rem 0.75rem 2rem;
   }
 
   .steps-container {
@@ -1285,37 +1298,37 @@ body {
   /* Update section title spacing */
   .discourse-section .section-header-row {
     padding: 0;
-    margin-bottom: 1rem;  /* Reduced from 1.5rem */
+    margin-bottom: 1rem;
   }
 
   .section-header {
-    text-align: left;  /* Align section header to left */
-    padding: 0 0.5rem;  /* Reduced side padding from 1rem to 0.5rem */
+    text-align: left;
+    padding: 0 0.5rem;
   }
 
   .section-header h2 {
-    text-align: left;  /* Align title to left */
+    text-align: left;
   }
 
   .section-subtitle {
     text-align: left;
-    margin: 0;  /* Remove auto margins */
+    margin: 0;
   }
 
   .feature-names-container {
-    padding: 0 0.5rem;  /* Reduced side padding from 1rem to 0.5rem */
-    width: 100%;  /* Increased from 90% to 100% */
+    padding: 0 0.5rem;
+    width: 100%;
   }
 
   .feature-names-vertical {
-    width: 100%;  /* Increased from 90% to 100% */
+    width: 100%;
     padding: 0.5rem 0;
     justify-content: flex-start;
   }
 
   .feature-description {
-    width: 100%;  /* Increased from 90% to 100% */
-    max-width: 100%;  /* Increased from 90% to 100% */
+    width: 100%;
+    max-width: 100%;
     font-size: 1rem;
     line-height: 1.5;
     margin: 0.5rem 0 0;
@@ -1324,7 +1337,7 @@ body {
   }
 
   .section-header-row {
-    padding: 0 0.5rem;  /* Reduced side padding from 1rem to 0.5rem */
+    padding: 0 0.5rem;
   }
 }
 
@@ -1343,7 +1356,7 @@ body {
 
   .steps-grid .step-card {
     position: relative;
-    overflow: visible !important; /* Force overflow visible */
+    overflow: visible !important;
   }
 
   /* Reset any existing arrows first */
@@ -1403,7 +1416,7 @@ body {
 /* Update mobile styles for Core Features section */
 @media (max-width: 768px) {
   .features-section.light {
-    padding: 3rem 0.75rem 2rem;  /* Reduced horizontal padding from 1rem to 0.75rem */
+    padding: 2rem 0.75rem 2rem;
   }
   
   /* Adjust feature content to use more horizontal space */
@@ -1414,23 +1427,23 @@ body {
   
   /* Ensure single feature image uses proper width */
   .single-feature-image {
-    max-width: 85%;  /* Increased from 75% to use more horizontal space */
+    max-width: 85%;
   }
 
   .feature-names-container {
-    padding: 0 0.5rem;  /* Reduced side padding from 1rem to 0.5rem */
-    width: 100%;  /* Increased from 90% to 100% */
+    padding: 0 0.5rem;
+    width: 100%;
   }
 
   .feature-names-vertical {
-    width: 100%;  /* Increased from 90% to 100% */
+    width: 100%;
     padding: 0.5rem 0;
     justify-content: flex-start;
   }
 
   .feature-description {
-    width: 100%;  /* Increased from 90% to 100% */
-    max-width: 100%;  /* Increased from 90% to 100% */
+    width: 100%;
+    max-width: 100%;
     font-size: 1rem;
     line-height: 1.5;
     margin: 0.5rem 0 0;
@@ -1439,19 +1452,19 @@ body {
   }
 
   .section-header-row {
-    padding: 0 0.5rem;  /* Reduced side padding from 1rem to 0.5rem */
+    padding: 0 0.5rem;
   }
 
   .section-header {
-    padding: 0 0.5rem;  /* Reduced side padding from 1rem to 0.5rem */
+    padding: 0 0.5rem;
   }
 }
 
 /* Update section spacing for mobile */
 @media (max-width: 768px) {
   .alternate-features {
-    gap: 1.5rem;  /* Reduced from 2rem to 1.5rem */
-    margin-top: 2rem;  /* Reduced from 4rem to 2rem */
+    gap: 1.5rem;
+    margin-top: 0.75rem;
   }
 }
 
@@ -1477,7 +1490,7 @@ body {
 /* Update mobile styles for discourse section title */
 @media (max-width: 768px) {
   .discourse-section .section-title {
-    font-size: 2rem;  /* Reduced from 2.5rem */
+    font-size: 2rem;
     text-align: left;
     width: 100%;
     line-height: 1.2;
@@ -1497,18 +1510,90 @@ body {
 /* Reduce margin-top for steps container */
 @media (max-width: 768px) {
   .discourse-section .steps-container {
-    margin-top: 1.5rem;  /* Reduced from 2rem */
+    margin-top: 1.5rem;
   }
 }
 
 /* Further reduce padding for the entire discourse section container */
 @media (max-width: 768px) {
   .discourse-section {
-    padding: 0.5rem 0.75rem 2rem;  /* Reduced horizontal padding from 1.5rem to 0.75rem */
+    padding: 0.5rem 0.75rem 2rem;
   }
   
   /* Adjust steps grid width to compensate for reduced container padding */
   .discourse-section .steps-grid {
-    width: 95%;  /* Increased from 85% to use more horizontal space */
+    width: 95%;
+  }
+}
+
+/* Reduce space below Core Features title */
+.features-section.light .section-header-row {
+  margin-bottom: 0.75rem;
+}
+
+/* Also adjust for mobile */
+@media (max-width: 768px) {
+  .features-section.light .section-header-row {
+    margin-bottom: 0.50rem;
+  }
+  
+  .alternate-features {
+    margin-top: 0.75rem;
+  }
+}
+
+/* Ensure mobile view also has left alignment */
+@media (max-width: 768px) {
+  .section-header {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  
+  .section-header h2 {
+    text-align: left;
+  }
+  
+  .section-title {
+    text-align: left;
+  }
+  
+  /* Ensure Core Features title is left-aligned */
+  .features-section.light .section-header-row {
+    text-align: left;
+  }
+}
+
+/* Adjust for tablet/mobile if needed */
+@media (max-width: 1024px) {
+  .footer-mockup.top {
+    transform: translateX(-55%);
+  }
+  
+  .footer-mockup.bottom {
+    transform: translateX(55%);
+  }
+}
+
+/* Center and reduce size of footer title */
+.footer-info .section-title {
+  text-align: center;
+  font-size: 3rem;  /* Reduced from 3.5rem */
+}
+
+/* Ensure subtitle is also centered */
+.footer-subtitle {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+  .footer-info .section-title {
+    font-size: 2.25rem;  /* Reduced from 2.5rem */
+    text-align: center;
+  }
+  
+  .footer-subtitle {
+    text-align: center;
   }
 }
