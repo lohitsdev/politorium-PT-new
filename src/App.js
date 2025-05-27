@@ -15,8 +15,10 @@ import downarrow from './downarrow.png';
 import splashImage from './544.png';
 import React, { useState, useEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react';
+import { Routes, Route, Link } from 'react-router-dom';
+import PrivacyPolicy from './PrivacyPolicy';
 
-function App() {
+function HomePage() {
   const [selectedFeature, setSelectedFeature] = useState('Local Feed');
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
@@ -246,7 +248,7 @@ function App() {
                 <div className="footer-links">
                   <p className="copyright">© 2024 PoliTorium. All rights reserved.</p>
                   <div className="legal-links">
-                    <a href="https://drive.google.com/file/d/1W6nmu0hgPX1i1wD-QFNNvyJOXEHx_loW/view?usp=sharing" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                    <Link to="/privacy-policy">Privacy Policy</Link>
                     <span className="dot-divider">•</span>
                     <a href="https://drive.google.com/file/d/1S0DwOU_EJPmo5TkOzMxPoX95A7nKA6l3/view?usp=sharing" target="_blank" rel="noopener noreferrer">Terms of Service</a>
                   </div>
@@ -258,6 +260,15 @@ function App() {
       )}
       <Analytics />
     </>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+    </Routes>
   );
 }
 
